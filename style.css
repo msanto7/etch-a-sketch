@@ -8,3 +8,12 @@ h1 {
     margin-left: 20px;
 }
 
+
+.grid-container {
+    display: flex;
+}
+
+.grid-item {
+    display: flex;
+}
+
