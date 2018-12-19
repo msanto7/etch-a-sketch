@@ -1,14 +1,15 @@
 //js to create div grid
 
 
+const container = document.querySelector('.grid-container');
+
+
 function createGrid(numRowCol) {
 
     for (let rows = 0; rows < numRowCol; rows++) {
         for (let cols = 0; cols < numRowCol; cols++) {
-            //$("grid-container").append("<div class='grid-item'></div>");
             let newDiv = document.createElement("div");
             newDiv.setAttribute("class", "grid-item");
-            //console.log(newDiv.className);
             document.getElementsByClassName("grid-container")[0].appendChild(newDiv);
         }
     }
@@ -19,17 +20,22 @@ function createGrid(numRowCol) {
 } //end create function
 
 //*******************************************
+//Mouse Over
+
+
+
+
+container.addEventListener('mousemove', (e) => {
+    e.target.style.background = 'brown';
+});
+
+
+
+
+
 
 
 
 //Driver 
-
-//this is a Jquery function to make this grid show up on load
-/* JQeuery Option
-$(document).ready(function() {
-    createGrid(16);
-});
-*/
-
 document.body.onload = createGrid(16);
 
