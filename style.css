@@ -10,7 +10,8 @@ h1 {
 
 
 .grid-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
     outline:4px solid white;
     margin: auto;
     height:960px;
@@ -18,7 +19,10 @@ h1 {
 }
 
 .grid-item {
-    display: inline-block;
+    background-color: darkcyan;
     outline:2px solid white;
-}
 
+    width: 60px;
+    height: 60px;
+
+}
